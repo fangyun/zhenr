@@ -6,4 +6,9 @@
   <packaging>pom</packaging>
   <name>zhenr</name>
   <description>Zhenr Web Container	</description>
+  <modules>
+  	<module>zhenr-home</module>
+  	<module>zhenr-logging</module>
+  	<module>zhenr-server</module>
+  </modules>
 </project>
