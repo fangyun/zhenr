@@ -18,8 +18,8 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import zhenr.util.Log;
-import zhenr.util.LogFactory;
+import zhenr.log.Log;
+import zhenr.log.LogFactory;
 
 /**
  * @author yunfang

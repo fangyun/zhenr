@@ -18,4 +18,6 @@
 		2. NLS.get(subclassOfTranslationBundle)
 			1. GlobalBundleCache缓存(Locale:(Class:TranslationBundle))
 7. logging实现
-	1. specified class > slf4j > stdErr
+	1. StdErrLog如何实现不同的Log的名称的？
+		* 使用Map隔离并维护不同的Log的名称
+	2. 注意AccessController.doPrivileged对特权资源的访问控制。	

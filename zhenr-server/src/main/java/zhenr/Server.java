@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.nio.channels.ServerSocketChannel;
 
-import zhenr.util.Log;
-import zhenr.util.LogFactory;
+import zhenr.log.Log;
+import zhenr.log.LogFactory;
 
 /**
  * @author FangYun
@@ -26,7 +26,7 @@ public class Server {
 			srv.start();
 			srv.awaitTermination();
 		} catch (Exception e) {
-			log.error(ZhenrText.get().zhenrStartError, e);
+			log.debug(ZhenrText.get().zhenrStartError, e);
 		}
 	}
 
@@ -66,7 +66,7 @@ public class Server {
 			ServerSocket ss = new ServerSocket(this.port);
 			ss.getChannel();
 		} catch (IOException e) {
-			log.error("Start socket service error.", e);
+			log.debug("Start socket service debug.", e);
 			throw new ZhenrException(e);
 		}
 	}
