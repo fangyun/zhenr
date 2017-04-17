@@ -22,3 +22,15 @@
 	1. StdErrLog如何实现不同的Log的名称的？
 		* 使用Map隔离并维护不同的Log的名称
 	2. 注意AccessController.doPrivileged对特权资源的访问控制。	
+8. EnsureConcurrentMap实现: 是用死循环来不断测试条件满足情况.
+
+	private ConcurrentMap<String, Object> ensureMap() {
+		while (true) {
+			ConcurrentMap<String, Object> map = map();
+			if (map != null)
+				return map;
+			map = new ConcurrentHashMap<>();
+			if (_map.compareAndSet(null, map))
+				return map;
+		}
+	}	
